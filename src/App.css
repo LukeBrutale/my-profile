@@ -35,6 +35,7 @@ li {
 }
 
 .content-img {
-  width: 100vh
+  width: 100vh;
+  height: 200px;
 }
 
