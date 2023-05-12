@@ -10,32 +10,7 @@
   grid-template-columns: 2fr 10fr;
 }
 
-header img {
-  width: 100px;
-  height: 100px;
-}
 
-li {
-  list-style: none;
-}
 
-.header {
-  grid-area: h;
-  background: turquoise;
-}
 
-.navigation {
-  background: orchid;
-  grid-area: n;
-}
-
-.content {
-  background: olive;
-  grid-area: c;
-}
-
-.content-img {
-  width: 100vh;
-  height: 200px;
-}
 

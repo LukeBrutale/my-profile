@@ -1,0 +1,9 @@
+.content {
+  background: olive;
+  grid-area: c;
+}
+
+.img {
+  width: 100vh;
+  height: 200px;
+}

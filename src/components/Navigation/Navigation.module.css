@@ -1,0 +1,13 @@
+.nav{
+  background: orchid;
+  grid-area: n;
+}
+
+.item {
+  list-style: none;
+}
+
+.item a {
+  color: rgb(180, 50, 14);
+  text-decoration: none;
+}
