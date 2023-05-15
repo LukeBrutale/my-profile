@@ -13,7 +13,7 @@ const Profile = () => {
         />
       </div>
       <din>Avatar + dis</din>
-      <MyPosts />
+      <MyPosts message="My  posts" />
     </div>
   );
 };
