@@ -4,7 +4,7 @@ import s from './Profile.module.css';
 
 const Profile = () => {
   return (
-    <div className={s.content}>
+    <div>
       <div>
         <img
           className={s.img}
@@ -12,7 +12,7 @@ const Profile = () => {
           alt=""
         />
       </div>
-      <din>Avatar + dis</din>
+      <div>Avatar + dis</div>
       <MyPosts message="My  posts" />
     </div>
   );

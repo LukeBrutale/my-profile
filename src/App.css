@@ -1,6 +1,5 @@
 .app-wrapper {
   display: grid;
-  /* margin: 0 auto; */
 
   grid-template-areas: 
   "h h"
@@ -10,7 +9,10 @@
   grid-template-columns: 2fr 10fr;
 }
 
-
+.app-wrapper-content {
+  background: rgb(24, 64, 77);
+  grid-area: c;
+}
 
 
 

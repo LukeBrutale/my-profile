@@ -1,16 +1,26 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
-import Navigation from './components/Navigation/Navigation';
+import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
+import Messages from './components/Messages/Messages';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="app-wrapper">
-      <Header />
-      <Navigation />
-      <Profile />
-    </div>
+    <BrowserRouter>
+      <div className="app-wrapper">
+        <Header />
+        <Navbar />
+        <div className="app-wrapper-content">
+          <Routes>
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/messages" element={<Messages />} />
+            {/* <Route path="/news" element={<News />} /> */}
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
