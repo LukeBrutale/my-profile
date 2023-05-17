@@ -22,6 +22,9 @@ body {
 .app-wrapper-content {
   background: rgba(24, 64, 77, 0.233);
   grid-area: c;
+
+  margin-left: 2px;
+  background-repeat: 4px;
 }
 
 
