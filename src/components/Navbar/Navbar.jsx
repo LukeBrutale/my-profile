@@ -7,19 +7,44 @@ const Navbar = () => {
     <nav className={s.nav}>
       <ul className={s.list}>
         <li className={s.item}>
-          <NavLink to="/profile">Profile</NavLink>
+          <NavLink
+            to="/profile"
+            className={navData => (navData.isActive ? s.active : s.item)}
+          >
+            Profile
+          </NavLink>
         </li>
         <li className={s.item}>
-          <NavLink to="/messages">Messages</NavLink>
+          <NavLink
+            to="/messages"
+            className={navData => (navData.isActive ? s.active : s.item)}
+          >
+            Messages
+          </NavLink>
         </li>
         <li className={s.item}>
-          <NavLink to="/news">News</NavLink>
+          <NavLink
+            to="/news"
+            className={navData => (navData.isActive ? s.active : s.item)}
+          >
+            News
+          </NavLink>
         </li>
         <li className={s.item}>
-          <NavLink to="/music">Music</NavLink>
+          <NavLink
+            to="/music"
+            className={navData => (navData.isActive ? s.active : s.item)}
+          >
+            Music
+          </NavLink>
         </li>
         <li className={s.item}>
-          <NavLink to="/settings">Settings</NavLink>
+          <NavLink
+            to="/settings"
+            className={navData => (navData.isActive ? s.active : s.item)}
+          >
+            Settings
+          </NavLink>
         </li>
       </ul>
     </nav>

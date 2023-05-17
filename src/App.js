@@ -9,15 +9,16 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <BrowserRouter>
-      <div className="app-wrapper">
-        <Header />
-        <Navbar />
-        <div className="app-wrapper-content">
-          <Routes>
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/messages" element={<Messages />} />
-            {/* <Route path="/news" element={<News />} /> */}
-          </Routes>
+      <div className="grid-container">
+        <div className="app-wrapper">
+          <Header />
+          <Navbar />
+          <div className="app-wrapper-content">
+            <Routes>
+              <Route path="/profile/*" element={<Profile />} />
+              <Route path="/messages/*" element={<Messages />} />
+            </Routes>
+          </div>
         </div>
       </div>
     </BrowserRouter>

@@ -1,6 +1,10 @@
+body {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/41294/hero.jpg) no-repeat center center fixed; 
+  background-size: cover;
+}
+
 .app-wrapper {
   display: grid;
-
   grid-template-areas: 
   "h h"
   "n c";
@@ -9,8 +13,14 @@
   grid-template-columns: 2fr 10fr;
 }
 
+/* .grid-container {
+  display: grid;
+  width: 1200px;
+  align-content: center;
+} */
+
 .app-wrapper-content {
-  background: rgb(24, 64, 77);
+  background: rgba(24, 64, 77, 0.233);
   grid-area: c;
 }
 

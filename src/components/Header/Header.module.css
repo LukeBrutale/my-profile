@@ -5,5 +5,8 @@ header img {
 
 .header {
   grid-area: h;
-  background: turquoise;
+/* background: -webkit-linear-gradient(to right, #4143453b, #232526); 
+background: linear-gradient(to right, #4143453a, #23252649); */
+
+
 }

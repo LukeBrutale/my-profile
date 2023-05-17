@@ -4,23 +4,32 @@ ul {
 }
 
 .nav{
-  background: rgb(94, 94, 94);
   grid-area: n;
+  background: #16222A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   padding: 20px;
 }
 
 .item {
   list-style: none;
+  padding: 5px;
 }
 
-.item  a{
+.item a{
   color: antiquewhite;
+  transition: 0.5s;
   text-decoration: none;
 }
 
+.item .active {
+  padding: 5px 5px 5px 8px;
+  color: coral;
+}
+
 .item a:focus, 
-.item a:hover,
-.item a:active {
+.item a:hover {
   color: coral;
   transition: 0.3s;
 }
