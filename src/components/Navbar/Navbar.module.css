@@ -19,7 +19,8 @@ ul {
 }
 
 .item a:focus, 
-.item a:hover {
+.item a:hover,
+.item a:active {
   color: coral;
   transition: 0.3s;
 }
