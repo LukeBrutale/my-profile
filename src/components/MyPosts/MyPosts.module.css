@@ -1,1 +1,35 @@
+.content {
+  padding: 10px;
+}
 
+.mypost {
+  color: aliceblue;
+}
+
+.addPost {
+  display: flex;
+  margin: 10px auto;
+}
+
+.btn {
+      background-color: #263242;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 4px 10px;
+    cursor: pointer;
+    transition: 0.7s;
+    border-radius: 2px;
+}
+
+  .btn:hover {
+    background-color: #042f68;
+    transition: 0.7s;
+}
+
+.textarea {
+	outline: none;
+  resize: none;
+  border: 1px solid #999;
+  background-color: #e0e0e0;
+}

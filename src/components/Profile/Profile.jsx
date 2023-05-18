@@ -7,8 +7,8 @@ const Profile = () => {
   return (
     <div>
       {/* <ProfileInfo /> */}
-      <div>Avatar + dis</div>
-      <MyPosts message="My  posts" />
+      {/* <div>Avatar + dis</div> */}
+      <MyPosts message="My post" />
     </div>
   );
 };
