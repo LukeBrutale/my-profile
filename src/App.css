@@ -24,7 +24,7 @@ body {
   grid-area: c;
 
   margin-left: 2px;
-  background-repeat: 4px;
+  border-radius:  4px;
 }
 
 
