@@ -1,0 +1,19 @@
+.item a {
+  text-decoration: none;
+    color: cornsilk;
+    transition: 0.5s
+}
+
+.item a:hover,
+.item a:focus {
+  color: coral;
+  transition: 0.5s
+}
+
+.item {
+  padding: 10px;
+}
+
+.item .active {
+  color: coral;
+}
