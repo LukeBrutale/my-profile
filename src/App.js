@@ -17,12 +17,15 @@ function App(props) {
             <Routes>
               <Route
                 path="/profile/*"
-                element={<Profile posts={props.posts} />}
+                element={<Profile posts={props.state.profilePage.posts} />}
               />
               <Route
                 path="/dialogs/*"
                 element={
-                  <Dialogs dialogs={props.dialogs} messages={props.messages} />
+                  <Dialogs
+                    dialogs={props.state.messagesPage.dialogs}
+                    messages={props.state.messagesPage.messages}
+                  />
                 }
               />
             </Routes>
