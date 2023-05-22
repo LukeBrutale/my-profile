@@ -12,10 +12,30 @@ const Dialogs = props => {
     <Message message={m.message} id={m.id} />
   ));
 
+  let newMessageElement = React.createRef();
+
+  // функція додоє нове повідомлення //
+  const addMessage = props => {
+    let text = newMessageElement.current.value;
+    alert(text);
+  };
+
   return (
     <div className={s.dialogs}>
       <div className={s.dialogs__item}>{dialogsElements}</div>
       <div className={s.messages}>{messagesElements}</div>
+      <div className={s.add__message}>
+        <textarea
+          ref={newMessageElement}
+          placeholder="Write me a message..."
+          cols="30"
+          rows="5"
+          className={s.textarea}
+        ></textarea>
+        <button onClick={addMessage} className={s.btn}>
+          Submit
+        </button>
+      </div>
     </div>
   );
 };
