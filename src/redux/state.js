@@ -1,3 +1,5 @@
+import { reRender } from '../render';
+
 let state = {
   profilePage: {
     posts: [
@@ -5,6 +7,7 @@ let state = {
       { id: 2, message: 'Brutale', likes: '15' },
       { id: 3, message: 'Yura', likes: '5' },
     ],
+    newPostText: 'Luke',
   },
   messagesPage: {
     messages: [
@@ -22,13 +25,21 @@ let state = {
   },
 };
 
-export let addPost = postMessage => {
+//функція додає новий пост //
+export let addPost = () => {
   let newPost = {
     id: 4,
-    message: postMessage,
+    message: state.profilePage.newPostText,
     likes: 0,
   };
   state.profilePage.posts.push(newPost);
+  reRender(state);
+};
+
+//функція додає символи в текстерію //
+export let updateNewPostText = newText => {
+  state.profilePage.newPostText = newText;
+  reRender(state);
 };
 
 export default state;

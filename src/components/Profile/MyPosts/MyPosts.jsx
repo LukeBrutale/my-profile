@@ -12,8 +12,14 @@ const MyPosts = props => {
 
   // функція додає новий пост, передається в button //
   const addPost = () => {
+    props.addPost();
+    props.updateNewPostText('');
+  };
+
+  // функція додає новий символ у текстерію //
+  const onPostChange = () => {
     let text = newPostElement.current.value;
-    props.addPost(text);
+    props.updateNewPostText(text);
   };
 
   return (
@@ -21,11 +27,13 @@ const MyPosts = props => {
       <div className={s.addPost}>
         <textarea
           ref={newPostElement}
-          placeholder="Remember, be nice!"
+          onChange={onPostChange}
+          value={props.newPostText}
+          // placeholder="Remember, be nice!"
           cols="30"
           rows="5"
           className={s.textarea}
-        ></textarea>
+        />
         <button onClick={addPost} className={s.btn}>
           Add post
         </button>
