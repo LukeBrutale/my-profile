@@ -1,4 +1,6 @@
-import { reRender } from '../render';
+let reRender = () => {
+  console.log('Hello');
+};
 
 let state = {
   profilePage: {
@@ -7,7 +9,7 @@ let state = {
       { id: 2, message: 'Brutale', likes: '15' },
       { id: 3, message: 'Yura', likes: '5' },
     ],
-    newPostText: 'Luke',
+    newPostText: 'Remember, be nice!',
   },
   messagesPage: {
     messages: [
@@ -26,7 +28,7 @@ let state = {
 };
 
 //функція додає новий пост //
-export let addPost = () => {
+export const addPost = () => {
   let newPost = {
     id: 4,
     message: state.profilePage.newPostText,
@@ -37,9 +39,13 @@ export let addPost = () => {
 };
 
 //функція додає символи в текстерію //
-export let updateNewPostText = newText => {
+export const updateNewPostText = newText => {
   state.profilePage.newPostText = newText;
   reRender(state);
+};
+
+export const subscribe = observer => {
+  reRender = observer;
 };
 
 export default state;

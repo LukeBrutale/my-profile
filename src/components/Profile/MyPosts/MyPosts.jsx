@@ -7,7 +7,7 @@ const MyPosts = props => {
     <Post message={p.message} likes={p.likes} id={p.id} />
   ));
 
-  // строрює силку
+  // створює силку на текстерію //
   let newPostElement = React.createRef();
 
   // функція додає новий пост, передається в button //
@@ -19,6 +19,7 @@ const MyPosts = props => {
   // функція додає новий символ у текстерію //
   const onPostChange = () => {
     let text = newPostElement.current.value;
+    console.log(text);
     props.updateNewPostText(text);
   };
 
@@ -29,7 +30,6 @@ const MyPosts = props => {
           ref={newPostElement}
           onChange={onPostChange}
           value={props.newPostText}
-          // placeholder="Remember, be nice!"
           cols="30"
           rows="5"
           className={s.textarea}
