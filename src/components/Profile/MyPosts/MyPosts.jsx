@@ -29,7 +29,7 @@ const MyPosts = props => {
         <textarea
           ref={newPostElement}
           onChange={onPostChange}
-          value={props.newPostText}
+          placeholder={props.newPostText}
           cols="30"
           rows="5"
           className={s.textarea}
