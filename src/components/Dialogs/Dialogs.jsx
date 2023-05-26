@@ -17,6 +17,7 @@ const Dialogs = props => {
   // функція додоє нове повідомлення //
   const addMessage = props => {
     let text = newMessageElement.current.value;
+    newMessageElement.current.value = '';
     alert(text);
   };
 
