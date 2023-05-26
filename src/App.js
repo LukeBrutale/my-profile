@@ -20,8 +20,7 @@ function App(props) {
                 element={
                   <Profile
                     profilePage={props.state.profilePage}
-                    updateNewPostText={props.updateNewPostText}
-                    addPost={props.addPost}
+                    dispatch={props.dispatch}
                   />
                 }
               />

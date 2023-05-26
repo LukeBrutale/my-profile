@@ -24,33 +24,36 @@ let store = {
     },
   },
 
-  getState() {
-    return _state
-  }
-
-  reRender() {
+  _reRender() {
     console.log('Hello');
   },
 
-  //функція додає новий пост //
-  addPost() {
-    let newPost = {
-      id: 4,
-      message: state.profilePage.newPostText,
-      likes: 0,
-    };
-    state.profilePage.posts.push(newPost);
-    reRender(state);
-  },
-
-  //функція додає символи в текстерію //
-  updateNewPostText(newText) {
-    state.profilePage.newPostText = newText;
-    reRender(state);
+  getState() {
+    return this._state;
   },
 
   subscribe(observer) {
-    reRender = observer;
+    this._reRender = observer;
+  },
+
+  dispatch(action) {
+    if (action.type === 'ADD-POST') {
+      //функція додає новий пост //
+
+      let newPost = {
+        id: 4,
+        message: this._state.profilePage.newPostText,
+        likes: 0,
+      };
+      this._state.profilePage.posts.push(newPost);
+      this._state.profilePage.newPostText = '';
+      this._reRender(this._state);
+    } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+      //функція додає символи в текстерію //
+
+      this._state.profilePage.newPostText = action.newText;
+      this._reRender(this._state);
+    }
   },
 };
 

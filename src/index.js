@@ -8,14 +8,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 let reRender = state => {
   root.render(
     <React.StrictMode>
-      <App
-        state={store._state}
-        addPost={store.addPost}
-        updateNewPostText={store.updateNewPostText}
-      />
+      <App state={state} dispatch={store.dispatch.bind(store)} />
     </React.StrictMode>,
   );
 };
 
-reRender(store._state);
+reRender(store.getState());
 store.subscribe(reRender);
