@@ -53,7 +53,7 @@ let store = {
       this._state.profilePage.newPostText = '';
       this._reRender(this._state);
 
-      //функція додає символи в текстерію ________________________________//
+      //функція додає символи в текстерію на сторінці профіль_____________//
     } else if (action.type === UPDATE_NEW_POST_TEXT) {
       this._state.profilePage.newPostText = action.newText;
       this._reRender(this._state);
