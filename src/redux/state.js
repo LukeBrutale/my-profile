@@ -1,3 +1,7 @@
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEWMESSAGE-BODY';
+
 let store = {
   _state: {
     profilePage: {
@@ -15,6 +19,7 @@ let store = {
         { id: 3, message: 'Thanks' },
         { id: 4, message: 'Somethink' },
       ],
+      newMessageBody: '',
       dialogs: [
         { id: 1, name: 'Luke' },
         { id: 2, name: 'Brutale' },
@@ -37,9 +42,8 @@ let store = {
   },
 
   dispatch(action) {
-    if (action.type === 'ADD-POST') {
-      //функція додає новий пост //
-
+    //функція додає новий пост ___________________________________________//
+    if (action.type === ADD_POST) {
       let newPost = {
         id: 4,
         message: this._state.profilePage.newPostText,
@@ -48,13 +52,24 @@ let store = {
       this._state.profilePage.posts.push(newPost);
       this._state.profilePage.newPostText = '';
       this._reRender(this._state);
-    } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
-      //функція додає символи в текстерію //
 
+      //функція додає символи в текстерію ________________________________//
+    } else if (action.type === UPDATE_NEW_POST_TEXT) {
       this._state.profilePage.newPostText = action.newText;
+      this._reRender(this._state);
+
+      //функція додає символи в текстерію на сторінці діалоги____________//
+    } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
+      this._state.messagesPage.newMessageBody = action.body;
       this._reRender(this._state);
     }
   },
 };
+
+export const addPostActionCreator = () => ({ type: ADD_POST });
+export const updateNewPostActionCreator = text => ({
+  type: UPDATE_NEW_POST_TEXT,
+  newText: text,
+});
 
 export default store;

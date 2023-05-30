@@ -4,13 +4,9 @@ import Message from './Message/Message';
 import s from './Dialogs.module.css';
 
 const Dialogs = props => {
-  let dialogsElements = props.dialogs.map(d => (
-    <DialogItem name={d.name} id={d.id} />
-  ));
+  let dialogsElements = props.dialogs.map(d => <DialogItem name={d.name} id={d.id} />);
 
-  let messagesElements = props.messages.map(m => (
-    <Message message={m.message} id={m.id} />
-  ));
+  let messagesElements = props.messages.map(m => <Message message={m.message} id={m.id} />);
 
   let newMessageElement = React.createRef();
 
@@ -34,7 +30,7 @@ const Dialogs = props => {
           className={s.textarea}
         ></textarea>
         <button onClick={addMessage} className={s.btn}>
-          Submit
+          Send
         </button>
       </div>
     </div>
