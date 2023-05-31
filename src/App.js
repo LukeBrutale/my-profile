@@ -24,10 +24,7 @@ function App(props) {
               <Route
                 path="/dialogs/*"
                 element={
-                  <Dialogs
-                    dialogs={props.state.messagesPage.dialogs}
-                    messages={props.state.messagesPage.messages}
-                  />
+                  <Dialogs store={props.store} messages={props.state.messagesPage.messages} />
                 }
               />
             </Routes>

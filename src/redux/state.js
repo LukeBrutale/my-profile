@@ -1,6 +1,7 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEWMESSAGE-BODY';
+const SEND_MESSAGE = 'SEND-MESSAGE';
 
 let store = {
   _state: {
@@ -10,7 +11,7 @@ let store = {
         { id: 2, message: 'Brutale', likes: '15' },
         { id: 3, message: 'Yura', likes: '5' },
       ],
-      newPostText: 'Remember, be nice!',
+      newPostText: '',
     },
     messagesPage: {
       messages: [
@@ -62,6 +63,13 @@ let store = {
     } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
       this._state.messagesPage.newMessageBody = action.body;
       this._reRender(this._state);
+
+      //функція відправляє нове повідомлення на сторінці діалоги____________//
+    } else if (action.type === SEND_MESSAGE) {
+      let body = this._state.messagesPage.newMessageBody;
+      this._state.messagesPage.newMessageBody = '';
+      this._state.messagesPage.messages.push({ id: 6, message: body });
+      this._reRender(this._state);
     }
   },
 };
@@ -70,6 +78,12 @@ export const addPostActionCreator = () => ({ type: ADD_POST });
 export const updateNewPostActionCreator = text => ({
   type: UPDATE_NEW_POST_TEXT,
   newText: text,
+});
+
+export const sendMessageCreator = () => ({ type: SEND_MESSAGE });
+export const updateNewMessageBodyCreator = body => ({
+  type: UPDATE_NEW_MESSAGE_BODY,
+  body: body,
 });
 
 export default store;
