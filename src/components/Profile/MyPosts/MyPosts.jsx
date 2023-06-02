@@ -1,12 +1,15 @@
-import React from 'react';
-import Post from './Post/Post';
-import s from './MyPosts.module.css';
+import React from "react";
+import Post from "./Post/Post";
+import s from "./MyPosts.module.css";
+import {
+  updateNewPostActionCreator,
+  addPostActionCreator,
+} from "../../../redux/profileReducer";
 
-import { addPostActionCreator } from '../../../redux/state';
-import { updateNewPostActionCreator } from '../../../redux/state';
-
-const MyPosts = props => {
-  let posts = props.posts.map(p => <Post message={p.message} likes={p.likes} id={p.id} />);
+const MyPosts = (props) => {
+  let posts = props.posts.map((p) => (
+    <Post message={p.message} likes={p.likes} id={p.id} />
+  ));
 
   // створює силку на текстерію //
   let newPostElement = React.createRef();
