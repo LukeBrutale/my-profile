@@ -3,7 +3,7 @@ import Post from "./Post/Post";
 import s from "./MyPosts.module.css";
 
 const MyPosts = (props) => {
-  let posts = props.posts.map((p) => (
+  let postsEl = props.posts.map((p) => (
     <Post message={p.message} likes={p.likes} id={p.id} />
   ));
 
@@ -39,7 +39,7 @@ const MyPosts = (props) => {
       </div>
       <div>
         <h3 className={s.mypost}>{props.message}</h3>
-        <div className={s.posts}>{posts}</div>
+        <div className={s.posts}>{postsEl}</div>
       </div>
     </div>
   );
