@@ -1,10 +1,6 @@
 import React from "react";
 import Post from "./Post/Post";
 import s from "./MyPosts.module.css";
-import {
-  updateNewPostActionCreator,
-  addPostActionCreator,
-} from "../../../redux/profileReducer";
 
 const MyPosts = (props) => {
   let posts = props.posts.map((p) => (
@@ -16,14 +12,13 @@ const MyPosts = (props) => {
 
   // функція додає новий пост //
   const addPost = () => {
-    props.dispatch(addPostActionCreator());
+    props.addPost();
   };
 
   // функція додає новий символ у текстерію //
   const onPostChange = () => {
     let text = newPostElement.current.value;
-    let action = updateNewPostActionCreator(text);
-    props.dispatch(action);
+    props.updateNewPostText(text);
   };
 
   return (
