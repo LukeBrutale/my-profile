@@ -1,5 +1,4 @@
-import React from "react";
-import { сonnect } from "react-redux";
+import { connect } from "react-redux";
 import Dialogs from "./Dialogs";
 // import s from "./Dialogs.module.css";
 import {
@@ -47,7 +46,7 @@ let mapDispatchToProps = (dispatch) => {
   };
 };
 
-const DialogsContainer = сonnect(
+const DialogsContainer = connect(
   mapStateToProps,
   mapDispatchToProps
 )(Dialogs);
