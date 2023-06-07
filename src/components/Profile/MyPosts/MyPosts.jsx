@@ -11,7 +11,7 @@ const MyPosts = (props) => {
   let newPostElement = React.createRef();
 
   // функція додає новий пост //
-  const addPost = () => {
+  const onAddPost = () => {
     props.addPost();
   };
 
@@ -33,7 +33,7 @@ const MyPosts = (props) => {
           rows="5"
           className={s.textarea}
         />
-        <button onClick={addPost} className={s.btn}>
+        <button onClick={onAddPost} className={s.btn}>
           Add post
         </button>
       </div>

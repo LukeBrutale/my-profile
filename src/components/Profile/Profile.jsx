@@ -1,5 +1,5 @@
 import React from "react";
-import MyPostsContainer from "./MyPosts/MyPosts";
+import { MyPostsContainer } from "./MyPosts/MyPostContainer";
 // import ProfileInfo from '../ProfileInfo/ProfileInfo';
 // import s from './Profile.module.css';
 
@@ -10,8 +10,6 @@ const Profile = (props) => {
       {/* <div>Avatar + dis</div> */}
       <MyPostsContainer
         message="My post"
-        // posts={props.profilePage.posts}
-        // newPostText={props.profilePage.newPostText}
         store={props.store}
       />
     </div>
