@@ -1,17 +1,14 @@
 import React from "react";
-import { MyPostsContainer } from "./MyPosts/MyPostContainer";
+import MyPostsContainer from "./MyPosts/MyPostContainer";
 // import ProfileInfo from '../ProfileInfo/ProfileInfo';
 // import s from './Profile.module.css';
 
-const Profile = (props) => {
+const Profile = ({ store }) => {
   return (
     <div>
       {/* <ProfileInfo /> */}
       {/* <div>Avatar + dis</div> */}
-      <MyPostsContainer
-        message="My post"
-        store={props.store}
-      />
+      <MyPostsContainer message="My post" store={store} />
     </div>
   );
 };
