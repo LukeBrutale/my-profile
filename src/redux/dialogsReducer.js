@@ -20,15 +20,20 @@ let initialState = {
 const dialogsReducer = (state = initialState, action) => {
   //функція додає символи в текстерію на сторінці діалоги____________//
   switch (action.type) {
-    case UPDATE_NEW_MESSAGE_BODY:
-      state.newMessageBody = action.body;
-      return state;
+    case UPDATE_NEW_MESSAGE_BODY: {
+      let stateCopy = { ...state };
+      stateCopy.newMessageBody = action.body;
+      return stateCopy;
+    }
     //функція відправляє нове повідомлення на сторінці діалоги____________//
-    case SEND_MESSAGE:
+    case SEND_MESSAGE: {
       let body = state.newMessageBody;
-      state.newMessageBody = "";
-      state.messages.push({ id: 6, message: body });
-      return state;
+      let stateCopy = { ...state };
+      stateCopy.newMessageBody = "";
+      stateCopy.massages = [...state.messages];
+      stateCopy.messages.push({ id: 6, message: body });
+      return stateCopy;
+    }
     default:
       return state;
   }
