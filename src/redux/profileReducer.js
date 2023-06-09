@@ -11,25 +11,25 @@ let initialState = {
 };
 
 const profileReducer = (state = initialState, action) => {
-  let stateCopy = { ...state };
-  //функція додає новий пост ___________________________________________//
   switch (action.type) {
-    case ADD_POST: {
+    case ADD_POST:
       let newPost = {
         id: 4,
         message: state.newPostText,
         likes: 0,
       };
-      stateCopy.posts.push(newPost);
-      stateCopy.newPostText = "";
-      return stateCopy;
-    }
+      return {
+        ...state,
+        posts: [...state.posts, newPost],
+        newPostText: "",
+      };
 
-    //функція додає символи в текстерію на сторінці профіль_____________//
-    case UPDATE_NEW_POST_TEXT: {
-      stateCopy.newPostText = action.newText;
-      return stateCopy;
-    }
+    case UPDATE_NEW_POST_TEXT:
+      return {
+        ...state,
+        newPostText: action.newText,
+      };
+
     default:
       return state;
   }
