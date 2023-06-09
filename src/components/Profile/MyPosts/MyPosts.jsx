@@ -4,7 +4,12 @@ import s from "./MyPosts.module.css";
 
 const MyPosts = (props) => {
   let postsEl = props.posts.map((p) => (
-    <Post message={p.message} likes={p.likes} id={p.id} />
+    <Post
+      key={p.id}
+      message={p.message}
+      likes={p.likes}
+      id={p.id}
+    />
   ));
 
   // створює силку на текстерію //

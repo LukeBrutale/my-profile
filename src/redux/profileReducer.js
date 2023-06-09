@@ -11,6 +11,7 @@ let initialState = {
 };
 
 const profileReducer = (state = initialState, action) => {
+  let stateCopy = { ...state };
   //функція додає новий пост ___________________________________________//
   switch (action.type) {
     case ADD_POST: {
@@ -19,8 +20,6 @@ const profileReducer = (state = initialState, action) => {
         message: state.newPostText,
         likes: 0,
       };
-      let stateCopy = { ...state };
-      stateCopy.posts = [...state.posts];
       stateCopy.posts.push(newPost);
       stateCopy.newPostText = "";
       return stateCopy;
@@ -28,7 +27,6 @@ const profileReducer = (state = initialState, action) => {
 
     //функція додає символи в текстерію на сторінці профіль_____________//
     case UPDATE_NEW_POST_TEXT: {
-      let stateCopy = { ...state };
       stateCopy.newPostText = action.newText;
       return stateCopy;
     }
