@@ -6,31 +6,39 @@ let initialState = {
   users: [
     {
       id: 1,
+      photoUrl:
+        "https://otkritkis.com/wp-content/uploads/2021/11/3-53.jpg",
       followed: true,
       fullName: "Yura",
       status: "online",
-      locayion: { city: "Kyiv", country: "Ukrine" },
+      location: { city: "Kyiv", country: "Ukrine" },
     },
     {
       id: 2,
+      photoUrl:
+        "https://otkritkis.com/wp-content/uploads/2021/11/3-53.jpg",
       followed: false,
       fullName: "Jonh",
       status: "offline",
-      locayion: { city: "Colorado", country: "USA" },
+      location: { city: "Colorado", country: "USA" },
     },
     {
       id: 3,
+      photoUrl:
+        "https://otkritkis.com/wp-content/uploads/2021/11/3-53.jpg",
       followed: true,
       fullName: "Michael",
       status: "offline",
-      locayion: { city: "Firenze", country: "Italia " },
+      location: { city: "Firenze", country: "Italia " },
     },
     {
       id: 4,
+      photoUrl:
+        "https://otkritkis.com/wp-content/uploads/2021/11/3-53.jpg",
       followed: false,
       fullName: "David",
       status: "online",
-      locayion: { city: "Kiel", country: "Deutschland" },
+      location: { city: "Kiel", country: "Deutschland" },
     },
   ],
 };

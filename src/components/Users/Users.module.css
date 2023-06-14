@@ -1,0 +1,11 @@
+.avatar {
+    padding: 10px 5px 15px;
+}
+
+.avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 30%;
+
+  box-shadow: 5px 5px 5px rgb(108, 108, 108);
+}
