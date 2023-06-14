@@ -11,18 +11,19 @@ let Users = (props) => {
               <img src={u.photoUrl} alt="ava" />
             </div>
             <div>
-              {u.followed ? (
-                <button
+              {u.followed ? ( <button
                   onClick={() => {
                     props.unfollow(u.id);
-                  }}>
+                  }}
+                >
                   unfollow
                 </button>
               ) : (
                 <button
                   onClick={() => {
                     props.follow(u.id);
-                  }}>
+                  }}
+                >
                   follow
                 </button>
               )}
