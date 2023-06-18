@@ -9,3 +9,23 @@
 
   box-shadow: 5px 5px 5px rgb(108, 108, 108);
 }
+
+span {
+  color: aliceblue;
+}
+
+.btn {
+    background-color: #263242;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 15px;
+    cursor: pointer;
+    transition: 0.7s;
+    border-radius: 2px;
+}
+
+  .btn:hover {
+    background-color: #042f68;
+    transition: 0.7s;
+}
