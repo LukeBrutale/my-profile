@@ -4,28 +4,17 @@ import s from "./Users.module.css";
 let Users = (props) => {
   return (
     <div>
-      {props.users.map((u) => (
+      {props.users.map((u) =>(
         <div key={u.id}>
           <span>
             <div className={s.avatar}>
               <img src={u.photoUrl} alt="ava" />
             </div>
             <div>
-              {u.followed ? (
-                <button
-                  onClick={() => {
-                    props.unfollow(u.id);
-                  }}>
-                  unfollow
-                </button>
-              ) : (
-                <button
-                  onClick={() => {
-                    props.follow(u.id);
-                  }}>
-                  follow
-                </button>
-              )}
+              {u.followed
+                ? (<button onClick={() => { props.unfollow(u.id) }}>unfollow</button>)
+                : (<button onClick={() => { props.follow(u.id) }}>follow</button>)
+              }
             </div>
           </span>
           <span>
