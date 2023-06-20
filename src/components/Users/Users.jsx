@@ -3,9 +3,9 @@ import s from './Users.module.css';
 
 let Users = props => {
   return (
-    <div>
+    <div >
       {props.users.map(u => (
-        <div key={u.id}>
+        <div className={s.container} key={u.id}>
           <span>
             <div className={s.avatar}>
               <img src={u.photoUrl} alt="ava" />
@@ -18,7 +18,7 @@ let Users = props => {
               }
             </div>
           </span>
-          <span>
+          <span className={s.infoUsers}>
             <span>
               <div>{u.fullName}</div>
               <div>{u.status}</div>

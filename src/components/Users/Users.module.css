@@ -1,13 +1,17 @@
+.container {
+  display: flex
+}
+
 .avatar {
     padding: 10px 5px 15px;
 }
 
 .avatar img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 30%;
 
-  box-shadow: 5px 5px 5px rgb(108, 108, 108);
+  box-shadow: 3px 3px 3px rgb(108, 108, 108);
 }
 
 span {
@@ -19,7 +23,7 @@ span {
     border: none;
     color: white;
     padding: 10px 20px;
-    margin: 5px 15px;
+    margin: 4px 10px;
     cursor: pointer;
     transition: 0.7s;
     border-radius: 2px;
@@ -29,3 +33,8 @@ span {
     background-color: #042f68;
     transition: 0.7s;
 }
+
+.infoUsers {
+  padding: 10px;
+}
+ 
