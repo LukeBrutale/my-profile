@@ -4,42 +4,42 @@ const SET_USERS = "SET_USERS";
 
 let initialState = {
   users: [
-    {
-      id: 1,
-      photoUrl:
-        "https://otkritkis.com/wp-content/uploads/2021/11/3-53.jpg",
-      followed: true,
-      fullName: "Yura",
-      status: "online",
-      location: { city: "Kyiv", country: "Ukrine" },
-    },
-    {
-      id: 2,
-      photoUrl:
-        "https://otkritkis.com/wp-content/uploads/2021/11/3-53.jpg",
-      followed: false,
-      fullName: "Jonh",
-      status: "offline",
-      location: { city: "Colorado", country: "USA" },
-    },
-    {
-      id: 3,
-      photoUrl:
-        "https://otkritkis.com/wp-content/uploads/2021/11/3-53.jpg",
-      followed: true,
-      fullName: "Michael",
-      status: "offline",
-      location: { city: "Firenze", country: "Italia " },
-    },
-    {
-      id: 4,
-      photoUrl:
-        "https://otkritkis.com/wp-content/uploads/2021/11/3-53.jpg",
-      followed: false,
-      fullName: "David",
-      status: "online",
-      location: { city: "Kiel", country: "Deutschland" },
-    },
+    // {
+    //   id: 1,
+    //   photoUrl:
+    //     "https://otkritkis.com/wp-content/uploads/2021/11/3-53.jpg",
+    //   followed: true,
+    //   name: "Yura",
+    //   status: "online",
+    //   location: { city: "Kyiv", country: "Ukrine" },
+    // },
+    // {
+    //   id: 2,
+    //   photoUrl:
+    //     "https://otkritkis.com/wp-content/uploads/2021/11/3-53.jpg",
+    //   followed: false,
+    //   name: "Jonh",
+    //   status: "offline",
+    //   location: { city: "Colorado", country: "USA" },
+    // },
+    // {
+    //   id: 3,
+    //   photoUrl:
+    //     "https://otkritkis.com/wp-content/uploads/2021/11/3-53.jpg",
+    //   followed: true,
+    //   name: "Michael",
+    //   status: "offline",
+    //   location: { city: "Firenze", country: "Italia " },
+    // },
+    // {
+    //   id: 4,
+    //   photoUrl:
+    //     "https://otkritkis.com/wp-content/uploads/2021/11/3-53.jpg",
+    //   followed: false,
+    //   name: "David",
+    //   status: "online",
+    //   location: { city: "Kiel", country: "Deutschland" },
+    // },
   ],
 };
 
