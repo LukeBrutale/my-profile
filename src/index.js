@@ -16,9 +16,3 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
-
-// reRender(store.getState());
-// store.subscribe(() => {
-//   let state = store.getState();
-//   reRender(state);
-// });
