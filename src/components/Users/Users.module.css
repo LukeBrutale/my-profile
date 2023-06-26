@@ -41,14 +41,16 @@ span {
 .selected {
   font-size: 20px;
   color:#0a4565dc;
-  /* transition: 0.2s; */
 }
- 
 
 .pages span {
   padding: 3px;
   cursor: pointer;
 }
+
+.pages span:hover {
+    color: #042f68;
+  }
 
 .pages {
   margin-bottom: 15px;
