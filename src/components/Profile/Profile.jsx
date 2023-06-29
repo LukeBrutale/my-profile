@@ -1,14 +1,13 @@
 import React from "react";
 import MyPostsContainer from "./MyPosts/MyPostContainer";
-// import ProfileInfo from '../ProfileInfo/ProfileInfo';
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 // import s from './Profile.module.css';
 
-const Profile = ({ store }) => {
+const Profile = (props) => {
   return (
     <div>
-      {/* <ProfileInfo /> */}
-      {/* <div>Avatar + dis</div> */}
-      <MyPostsContainer message="My post" store={store} />
+      <ProfileInfo profile={props.profile} />
+      <MyPostsContainer message="My post" />
     </div>
   );
 };

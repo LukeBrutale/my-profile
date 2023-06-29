@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom'
 import s from './Users.module.css';
 import userPhoto from '../../icons/3-53.jpg'
 
@@ -23,7 +24,9 @@ const Users = (props) => {
         <div className={s.container} key={u.id}>
           <span>
             <div className={s.avatar}>
-              <img src={u.photos.small !== null ? u.photos.small : userPhoto} alt="ava" />
+              <NavLink to={'/profile' + u.id}>
+                <img src={u.photos.small !== null ? u.photos.small : userPhoto} alt="ava" />
+              </NavLink>
             </div>
             <div>
               {
