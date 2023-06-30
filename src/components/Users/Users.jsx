@@ -24,7 +24,7 @@ const Users = (props) => {
         <div className={s.container} key={u.id}>
           <span>
             <div className={s.avatar}>
-              <NavLink to={'/profile/' + u.id}>
+              <NavLink to={'./../profile/' + u.id}>
                 <img src={u.photos.small !== null ? u.photos.small : userPhoto} alt="ava" />
               </NavLink>
             </div>
