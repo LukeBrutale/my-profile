@@ -1,14 +1,13 @@
 import React from 'react';
 import s from './Header.module.css';
-// import svg from '../../icons/logo-luke.svg';
 import Logo from '../../icons/icons8-logo-80.png';
 import { NavLink } from 'react-router-dom'
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header className={s.header}>
       <div className={s.loginBlock}>
-        <NavLink to={'/login'}>Login</NavLink >
+        {props.isAuth ? props.login : <NavLink to={'/login'} className={s.login}>Login</NavLink >}
       </div>
       <img className={s.logo} src={Logo} alt="logo" />
 

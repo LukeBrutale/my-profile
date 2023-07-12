@@ -17,6 +17,16 @@ background: linear-gradient(to right, #4143453a, #23252649); */
 };
 
 .loginBlock a {
-      color: aliceblue;
-    text-decoration: none;
+ text-decoration: none;
+}
+
+a {
+  color: antiquewhite;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(51, 60, 63, 0.826);
+  transition: 200ms;
+  
 }
