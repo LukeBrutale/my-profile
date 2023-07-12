@@ -15,7 +15,7 @@ function ProfileContainer(props) {
       .then((response) => {
         props.setUserProfile(response.data);
       });
-  }, [userId]);
+  }, [currUserId]);
 
   return (
     <div>
